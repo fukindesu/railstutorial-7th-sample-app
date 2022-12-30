@@ -182,6 +182,19 @@ input {
   }
 }
 
+.checkbox {
+  margin: -10px 0 10px;
+  span {
+    margin: 0 0 0 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 /* misc */
 
 .debug_dump {
