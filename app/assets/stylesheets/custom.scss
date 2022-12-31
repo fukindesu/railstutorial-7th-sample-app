@@ -201,11 +201,24 @@ input {
   clear: both;
   float: left;
   width: 100%;
-  margin: 45px 0 0;
+  margin: 20px 0 20px;
+  padding: 10px;
 }
 
 /* Dropdown menu */
 
 .dropdown-menu.active {
   display: block;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }
