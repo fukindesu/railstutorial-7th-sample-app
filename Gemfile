@@ -17,7 +17,7 @@ gem "bootstrap-sass", "~> 3.4.1"
 gem "sassc-rails", "~> 2.1.2"
 
 group :development, :test do
-  gem "sqlite3", "~> 1.4.2"
+  gem 'sqlite3', '~> 1.5', '>= 1.5.4'
   gem "debug", "~> 1.5.0", platforms: %i[ mri mingw x64_mingw ]
 end
 
