@@ -2,6 +2,8 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
+gem "image_processing", "~> 1.12.2"
+gem "active_storage_validations", "~> 1.0.3"
 gem "bcrypt", "~> 3.1.18"
 gem "faker", "~> 3.1"
 gem "will_paginate", "~> 3.3.1"
@@ -38,4 +40,5 @@ end
 
 group :production do
   gem "pg", "~> 1.3.5"
+  gem "aws-sdk-s3", "~> 1.0", ">= 1.117.2", require: false
 end

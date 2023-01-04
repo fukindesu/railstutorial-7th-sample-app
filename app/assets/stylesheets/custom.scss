@@ -222,3 +222,49 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    display: block;
+    margin: 0 60px 0 0;
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+  .gravatar {
+    float: left;
+    margin: 5px 10px 0 0;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin: 0 0 5px;
+  }
+}
+
+span.image {
+  margin: 10px 0 0;
+  input {
+    border: 0;
+  }
+}
