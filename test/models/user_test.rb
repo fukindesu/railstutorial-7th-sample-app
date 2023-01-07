@@ -109,6 +109,7 @@ class UserTest < ActiveSupport::TestCase
     # 自分自身の投稿はフィードに含まれる
     michael.microposts.each do |post_self|
       assert michael.feed.include?(post_self)
+      assert_equal michael.feed.distinct, michael.feed
     end
     # フォローしていないユーザーの投稿はフィードに含まれない
     archer.microposts.each do |post_unfollowed|

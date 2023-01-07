@@ -70,12 +70,9 @@ class User < ApplicationRecord
   end
 
   def feed
-    # Micropost.where('user_id IN (?) OR user_id = ?', following_ids, id)
-    # Micropost.where('user_id IN (:following_ids) OR user_id = :user_id', following_ids: following_ids, user_id: id)
-    following_ids = <<~SQL
-      SELECT followed_id FROM relationships WHERE follower_id = :user_id
-    SQL
-    Micropost.where("user_id IN (#{following_ids}) OR user_id = :user_id", user_id: id)
+    Micropost.left_outer_joins(user: :followers)
+      .where("relationships.follower_id = :id or microposts.user_id = :id", { id: })
+      .distinct
       .includes(:user, image_attachment: :blob)
   end
 
