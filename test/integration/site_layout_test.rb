@@ -30,4 +30,11 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', users_path, count: 1
     assert_select 'a[href=?]', logout_path
   end
+
+  test 'stats count' do
+    log_in_as(@user)
+    get root_path
+    assert_match @user.following.count.to_s, response.body
+    assert_match @user.followers.count.to_s, response.body
+  end
 end

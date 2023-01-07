@@ -19,18 +19,17 @@ User.create!(
   )
 end
 
-User.create!(
-  name: 'Fukin Desu',
-  email: 'fukindesu@gmail.com',
-  password: 'Foobar_!',
-  password_confirmation: 'Foobar_!',
-  activated: true,
-  activated_at: Time.zone.now
-)
-
-# Generate microposts for some users
+# Generate microposts by several users.
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(word_count: 5)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+# Generate relationship
+users = User.all
+user = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
