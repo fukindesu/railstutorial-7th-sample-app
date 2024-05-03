@@ -15,7 +15,7 @@ gem "bootsnap",        "1.16.0", require: false
 gem "sqlite3",         "1.6.1"
 
 group :development, :test do
-  gem "debug",   "1.7.1", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", "1.7.1", platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
@@ -23,6 +23,8 @@ group :development do
   gem "solargraph",          "0.50.0"
   gem "irb",                 "1.10.0"
   gem "repl_type_completor", "0.1.2"
+  gem "rubocop-shopify", require: false
+  gem "rubocop-performance", require: false
 end
 
 group :test do
