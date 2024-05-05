@@ -7,3 +7,6 @@ Layout/FrozenStringLiteralComment:
 
 Style/StringLiterals:
   Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
