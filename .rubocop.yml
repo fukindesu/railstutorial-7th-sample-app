@@ -2,6 +2,17 @@ inherit_gem:
   # https://github.com/Shopify/ruby-style-guide/blob/main/rubocop.yml
   rubocop-shopify: rubocop.yml
 
+# Rails:
+#   Enabled: true
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+
 Layout/FrozenStringLiteralComment:
   Enabled: false
 
@@ -9,4 +20,7 @@ Style/StringLiterals:
   Enabled: false
 
 Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/WordArray:
   Enabled: false
