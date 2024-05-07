@@ -24,3 +24,10 @@ Style/ClassAndModuleChildren:
 
 Style/WordArray:
   Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  AllowedMethods:
+    - include
+    - render
+    - redirect_to
