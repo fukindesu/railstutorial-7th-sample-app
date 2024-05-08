@@ -31,3 +31,6 @@ Style/MethodCallWithArgsParentheses:
     - include
     - render
     - redirect_to
+
+Layout/LineLength:
+  Max: 160
