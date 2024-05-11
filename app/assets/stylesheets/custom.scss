@@ -112,6 +112,25 @@ footer {
     }
   }
 }
+@media (max-width: 768px) {
+  footer {
+    small {
+      display: block;
+      float: none;
+      margin-bottom: 1em;
+    }
+
+    ul {
+      float: none;
+      padding: 0;
+
+      li {
+        float: none;
+        margin-left: 0;
+      }
+    }
+  }
+}
 
 // miscellaneous
 
@@ -120,6 +139,9 @@ footer {
   margin-top: 40px;
   padding: .5em;
   line-height: 1.6em;
+  background-color: lavenderblush;
+  color: #c7254e;
+  border: 0;
 }
 
 // sidebar
@@ -193,4 +215,10 @@ input {
   .form_control {
     color: $state-danger-text;
   }
+}
+
+// Dropdown menu
+
+.dropdown-menu.active {
+  display: block;
 }

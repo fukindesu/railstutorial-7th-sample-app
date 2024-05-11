@@ -13,24 +13,23 @@ AllCops:
     - 'vendor/**/*'
     - 'tmp/**/*'
 
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ClassMethodsDefinitions:
+  Enabled: false
+
 Layout/FrozenStringLiteralComment:
   Enabled: false
 
 Style/StringLiterals:
   Enabled: false
 
-Style/ClassAndModuleChildren:
-  Enabled: false
-
 Style/WordArray:
   Enabled: false
 
 Style/MethodCallWithArgsParentheses:
-  Enabled: true
-  AllowedMethods:
-    - include
-    - render
-    - redirect_to
+  Enabled: false
 
 Layout/LineLength:
   Max: 160
