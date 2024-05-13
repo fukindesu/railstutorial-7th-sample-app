@@ -217,6 +217,25 @@ input {
   }
 }
 
+.checkbox {
+
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+    display: inline-block;
+
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: .6;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
 // Dropdown menu
 
 .dropdown-menu.active {
